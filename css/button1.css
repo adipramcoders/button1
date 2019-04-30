@@ -1,0 +1,66 @@
+.intro{
+	display: flex;
+	justify-content: center;
+	margin: 50px 0px 90px 0px;
+}
+.bg-black{
+	height: 2vh;
+	width: 2vh;
+	background-color: black;
+}
+.bg-red{
+	height: 2vh;
+	width: 2vh;
+	background-color: red;
+}
+.btn-block{
+	display: flex;
+	margin: 0 10vw;
+}
+.btn-left,.btn-right{
+	height: 50vh;
+	width: 39.5vw;
+	border: solid black 1px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.btn-right{
+	border-color: red;
+}
+.btn-left{
+	margin-right: 1vw;
+}
+.b1bdr,.b2bdr{
+	border: solid gray 2px;
+	height: 1.8rem;
+	width: 5rem;
+	border-radius: 30px;
+	padding: 0.4em;
+}
+.b1btn,.b2btn{
+	height: 1.7rem;
+	width: 2rem;
+	border-radius: 50%;
+	box-shadow: 0px 0px 10px gray;
+	float: left;
+	background-color: white;
+	transition: transform 0.6s;
+}
+#button1:checked ~ .container .btn-block .btn-left .b1bdr{
+	transition: 1s;
+	background-color: #7fff00;
+}
+#button1:checked ~ .container .btn-block .btn-left .b1bdr .b1btn{
+	animation-name: mymove;
+	animation-duration: .5s;
+	transform: translateX(3rem);
+}
+@keyframes mymove{
+	from {width: 2.5rem}
+	to {width: 2rem}
+}
+.btn2move{
+	animation-name: mymove;
+	animation-duration: .5s;
+}
